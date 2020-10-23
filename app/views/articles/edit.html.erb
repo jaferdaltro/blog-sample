@@ -1,0 +1,9 @@
+<h1>Edit Articles</h1>
+
+<%= render 'form' %>
+
+<p>
+    <%= link_to 'back', articles_path %> |
+    <%= link_to 'delete', article_path(@article), method: :delete %>
+    
+</p>
