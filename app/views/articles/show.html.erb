@@ -1,10 +1,24 @@
-<h1>Article Detail</h1>
+<div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-8 mt-4">
+            <div class="card text-center">
+                <div class="card-header text-italic "> 
+                    by Jafer Daltro 
+                </div>
+                <div class="card-body ">
+                        <p class="card-text"><%= simple_format(@article.description) %></p>
+                        <%=link_to "Edit", edit_article_path(@article), class:"btn btn-outline-warning"  %>
+                        <%=link_to "Delete", article_path(@article), method: :delete, class:"btn btn-outline-danger"  %>
+                </div>
 
-<p><strong>title:</strong> <%=@article.title %></p>
-<p><strong>description:</strong> <%=@article.description %></p>
+                <div class="card-footer text-muted">
+                   <small>
+                        Creaded <%= time_ago_in_words(@article.created_at) %> ago,
+                        Edited <%= time_ago_in_words(@article.updated_at) %> ago.
+                   </small>
+                </div>
 
-<p>
-    <%= link_to 'Edit', edit_article_path %> |
-    <%= link_to 'All Articles', articles_path %> |
-    <%= link_to 'Delete', article_path(@article), method: :dlete %>
-</p>
+            </div>
+        </div>
+        </div>
+</div>
