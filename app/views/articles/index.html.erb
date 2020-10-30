@@ -4,7 +4,7 @@
       <div class="col-8 mt-4">
             <div class="card text-center">
                 <div class="card-header text-italic "> 
-                    by Jafer Daltro 
+                    by <%= article.user.username if article.user %> 
                 </div>
                 <div class="card-body ">
                         <h5 class="card-title"><%= article.title %></h5>
