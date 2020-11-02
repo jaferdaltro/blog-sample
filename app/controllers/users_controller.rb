@@ -40,6 +40,14 @@ class UsersController < ApplicationController
             render 'edit'
         end
     end
+
+    def destroy
+        @user.destroy
+        session[:user_id] = nil
+        flash[:notice] = "Your account has deleted!"
+        redirect_to articles_path
+    end
+    
     
     
 
