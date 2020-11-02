@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
     before_action :set_user, only: [:edit, :update, :show]
+    before_action :require_user, only: [:update, :edit]
+    before_action :require_same_user, only: [:update, :edit]
 
     def index
         @users = User.all
@@ -49,6 +51,13 @@ class UsersController < ApplicationController
 
     def set_user
         @user = User.find(params[:id]) 
+    end
+
+    def require_same_user
+        if set_user != current_user
+            flash[:alert] = 'Mexa só no que é seu!'
+            redirect_to @user
+        end
     end
     
     
