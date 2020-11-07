@@ -8,7 +8,11 @@
                     <% if article.user %>
                          by <%= link_to article.user.username, user_path(article.user)  %> 
                     <% end %> 
+                     <% if article.categories.any? %>
+                        <div class="mt-2"><%= render article.categories  %></div>
+                    <% end %>
                 </div>
+                  
                 <div class="card-body ">
                         <h5 class="card-title"><%= article.title %></h5>
                         <p class="card-text"><%= truncate(article.description) %></p>
