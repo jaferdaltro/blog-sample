@@ -1,24 +1,13 @@
-# README
+# Blog-Sample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Blog-Sample is a blog created to show some features that blogs can have.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+## Usage
 
-* Database creation
+## Development
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
